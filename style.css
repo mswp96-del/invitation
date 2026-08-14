@@ -1,0 +1,226 @@
+/* ===== 테마 변수 ===== */
+:root {
+  --bg: #efe7db;
+  --card-bg: #fbf7f0;
+  --ink: #4a3f35;
+  --ink-soft: #7a6d5d;
+  --accent: #a8763e;      /* 브라운 골드 */
+  --accent-soft: #c9a36b;
+  --line: #e2d6c3;
+  --white: #ffffff;
+  --radius: 14px;
+  --serif: "Nanum Myeongjo", "Batang", serif;
+  --sans: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --calli: "Nanum Brush Script", "Nanum Myeongjo", cursive;  /* 캘리그래피(붓글씨) */
+  --ink-calli: #2b2622;   /* 먹색 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+/* ===== 카드 (모바일 우선) ===== */
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(74, 63, 53, .12);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+section { padding: 30px 26px; }
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  letter-spacing: .04em;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== 구분선 ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
+  color: var(--accent-soft);
+}
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.divider span { font-size: .8rem; }
+
+/* ===== 표지 ===== */
+.cover {
+  text-align: center;
+  padding: 46px 26px 40px;
+  background: linear-gradient(180deg, #f6efe2 0%, var(--card-bg) 100%);
+}
+.cover__label {
+  font-family: var(--calli);
+  color: var(--ink-calli);
+  letter-spacing: .02em;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.cover__name {
+  font-family: var(--calli);
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 4px 0 16px;
+  /* 메탈릭 금색 그라데이션 */
+  color: #c9a227;   /* 미지원 브라우저 대비 기본 금색 */
+  background: linear-gradient(180deg, #f7e491 0%, #e6c14a 35%, #c9962a 70%, #a9761d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cover__sub {
+  font-family: var(--calli);
+  color: var(--ink-calli);
+  font-size: 1.5rem;
+  line-height: 1.35;
+  margin-bottom: 24px;
+}
+.cover__date {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 26px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.cover__date-day {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--accent);
+  letter-spacing: .05em;
+}
+.cover__date-time { font-size: .85rem; color: var(--ink-soft); }
+
+/* ===== 인사말 ===== */
+.message { text-align: center; }
+.message p { color: var(--ink); font-size: .96rem; }
+
+/* ===== 카네이션 수채화 ===== */
+.flower {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.flower__art {
+  width: 190px;
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.flower__caption {
+  margin-top: 10px;
+  font-family: var(--calli);
+  font-size: 1.4rem;
+  color: var(--ink-calli);
+}
+
+/* ===== 안내 정보 ===== */
+.info__list { display: flex; flex-direction: column; gap: 12px; }
+.info__row {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.info__row dt {
+  font-family: var(--serif);
+  color: var(--accent);
+  font-size: .9rem;
+}
+.info__row dd { color: var(--ink); font-size: .92rem; }
+
+/* ===== 오시는 길 ===== */
+.map__place {
+  text-align: center;
+  color: var(--ink);
+  font-size: .95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.map__button {
+  display: block;
+  margin-top: 14px;
+  padding: 14px;
+  text-align: center;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: .95rem;
+  letter-spacing: .02em;
+  min-height: 44px;
+}
+.map__button:active { background: #8f6231; }
+
+/* ===== 참석 여부 (RSVP) ===== */
+.contact__notice {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: .92rem;
+  margin-bottom: 18px;
+}
+.contact__notice strong { color: var(--accent); font-weight: 700; }
+.contact__buttons { display: flex; gap: 10px; }
+.contact__btn--accent {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+.contact__btn--accent:active { background: #8f6231; }
+.contact__btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  border: 1px solid var(--accent-soft);
+  border-radius: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: .92rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__btn:active { background: #f2e8d8; }
+
+/* ===== 푸터 ===== */
+.footer {
+  text-align: center;
+  padding: 26px;
+  background: #f2eadc;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: .88rem;
+}
+
+/* ===== 넓은 화면 보정 ===== */
+@media (min-width: 500px) {
+  body { padding: 40px 16px; }
+}

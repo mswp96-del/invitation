@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>환갑잔치에 초대합니다</title>
+  <meta property="og:title" content="환갑잔치에 초대합니다">
+  <meta property="og:description" content="2026년 10월 26일, 따뜻한 점심 자리에 모십니다.">
+  <!-- 캘리그래피(붓글씨) 타이틀용 웹폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+
+    <!-- 표지 -->
+    <section class="cover">
+      <p class="cover__label">고운 예순, 점심 자리에 모십니다</p>
+      <h1 class="cover__name">원정숙 님</h1>
+      <p class="cover__sub">예순 번의 계절이 무르익어<br>한 해의 노을처럼 고운 날을 맞았습니다.</p>
+      <div class="cover__date">
+        <span class="cover__date-day">2026. 10. 26.</span>
+        <span class="cover__date-time">일요일 낮 12시</span>
+      </div>
+    </section>
+
+    <div class="divider"><span>❦</span></div>
+
+    <!-- 인사말 -->
+    <section class="message">
+      <p>
+        흐르는 세월 속에서도<br>
+        한결같은 마음으로 살아오신 원정숙 님,<br>
+        그 고운 예순 해를 함께 기리고자 합니다.<br><br>
+        무르익은 이 가을,<br>
+        정성으로 차린 점심상에 둘러앉아<br>
+        도란도란 이야기 나누는 자리에<br>
+        귀한 걸음 내어 주시면 더없이 기쁘겠습니다.
+      </p>
+    </section>
+
+    <div class="divider"><span>❦</span></div>
+
+    <!-- 카네이션 수채화 -->
+    <section class="flower">
+      <svg class="flower__art" viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="분홍 카네이션 두 송이 수채화 그림">
+        <defs>
+          <filter id="wc" x="-25%" y="-25%" width="150%" height="150%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02 0.03" numOctaves="4" seed="9" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+          <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3.2"/>
+          </filter>
+          <!-- 카네이션 한 송이 -->
+          <g id="bloom" filter="url(#wc)">
+            <circle cx="0" cy="0" r="33" fill="#f0b9c9" opacity="0.30"/>
+            <g opacity="0.5" fill="#e79ab2">
+              <circle cx="-19" cy="-6" r="13"/><circle cx="-12" cy="-21" r="13"/>
+              <circle cx="4" cy="-25" r="13"/><circle cx="19" cy="-15" r="13"/>
+              <circle cx="23" cy="3" r="13"/><circle cx="15" cy="18" r="13"/>
+              <circle cx="-2" cy="23" r="13"/><circle cx="-18" cy="15" r="13"/>
+              <circle cx="-25" cy="-1" r="12"/>
+            </g>
+            <g opacity="0.52" fill="#d3688a">
+              <circle cx="-10" cy="-7" r="11"/><circle cx="-2" cy="-15" r="11"/>
+              <circle cx="11" cy="-9" r="11"/><circle cx="13" cy="4" r="11"/>
+              <circle cx="2" cy="13" r="11"/><circle cx="-11" cy="8" r="11"/>
+            </g>
+            <g opacity="0.55" fill="#b8496b">
+              <circle cx="0" cy="-2" r="8"/><circle cx="7" cy="4" r="7"/><circle cx="-5" cy="4" r="7"/>
+            </g>
+            <path d="M0 -24 L0 20 M-14 -14 C-9 4 -4 14 2 20 M14 -14 C9 4 4 14 -2 20
+                     M-22 2 C-12 10 -6 16 -1 20 M22 2 C12 10 6 16 1 20"
+                  stroke="#9c2f4b" stroke-width="1.3" fill="none" opacity="0.35"/>
+            <circle cx="-8" cy="-10" r="7" fill="#fdeef2" opacity="0.55"/>
+            <circle cx="3" cy="-6" r="5" fill="#fdeef2" opacity="0.5"/>
+          </g>
+        </defs>
+
+        <!-- 수채 번짐 배경 -->
+        <ellipse cx="150" cy="70" rx="52" ry="50" fill="#f2c6d1" opacity="0.22" filter="url(#soft)"/>
+        <ellipse cx="82" cy="104" rx="46" ry="44" fill="#f2c6d1" opacity="0.22" filter="url(#soft)"/>
+
+        <!-- 줄기 (교차) -->
+        <g filter="url(#wc)" fill="none" stroke-linecap="round">
+          <path d="M150 96 C144 150 120 200 104 250" stroke="#4f7a43" stroke-width="6" opacity="0.8"/>
+          <path d="M84 126 C92 168 118 210 134 250" stroke="#3f7038" stroke-width="6" opacity="0.8"/>
+        </g>
+        <!-- 잎 (가늘고 긴 잎) -->
+        <g filter="url(#wc)" opacity="0.78">
+          <path d="M132 168 C108 176 92 196 86 220 C110 214 128 196 134 172 Z" fill="#5a8a49"/>
+          <path d="M116 150 C138 156 156 176 160 198 C138 194 120 178 114 154 Z" fill="#4f8040"/>
+          <path d="M124 210 C104 220 92 240 90 256 C110 250 122 234 126 214 Z" fill="#5a8a49"/>
+        </g>
+
+        <!-- 꽃받침 (봉오리 컵) -->
+        <path d="M144 92 C147 108 161 108 164 92 C160 102 148 102 144 92 Z" fill="#6f8f4a" opacity="0.9" filter="url(#wc)"/>
+        <path d="M76 122 C79 138 93 138 96 122 C92 132 80 132 76 122 Z" fill="#638546" opacity="0.9" filter="url(#wc)"/>
+
+        <!-- 꽃송이 두 개 -->
+        <use href="#bloom" transform="translate(154,62) scale(1.08)"/>
+        <use href="#bloom" transform="translate(82,100) scale(0.9)"/>
+      </svg>
+      <p class="flower__caption">고운 예순, 감사와 존경을 담아</p>
+    </section>
+
+    <div class="divider"><span>❦</span></div>
+
+    <!-- 안내 정보 -->
+    <section class="info">
+      <h2 class="section-title">모임 안내</h2>
+      <dl class="info__list">
+        <div class="info__row">
+          <dt>일시</dt><dd>2026년 10월 26일 (일) 낮 12시</dd>
+        </div>
+        <div class="info__row">
+          <dt>장소</dt><dd>하루일식 (풍강빌딩 5층)</dd>
+        </div>
+        <div class="info__row">
+          <dt>주소</dt><dd id="venue-address">강원특별자치도 춘천시 후석로 12</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="divider"><span>❦</span></div>
+
+    <!-- 오시는 길 -->
+    <section class="map">
+      <h2 class="section-title">오시는 길</h2>
+      <p class="map__place">하루일식 (풍강빌딩 5층)<br>강원특별자치도 춘천시 후석로 12</p>
+      <a id="map-link" class="map__button" href="#" target="_blank" rel="noopener">
+        📍 카카오맵으로 길찾기
+      </a>
+    </section>
+
+    <div class="divider"><span>❦</span></div>
+
+    <!-- 참석 여부 (RSVP) -->
+    <section class="contact">
+      <h2 class="section-title">참석 여부</h2>
+      <p class="contact__notice">
+        정성껏 자리를 준비하고자 합니다.<br>
+        <strong>참석 여부를 문자로 남겨 주시면</strong> 감사하겠습니다.
+      </p>
+      <div class="contact__buttons">
+        <a id="tel-link" class="contact__btn" href="tel:010-2603-9217">📞 전화하기</a>
+        <a id="sms-link" class="contact__btn contact__btn--accent" href="sms:010-2603-9217">💬 참석 여부 문자</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>고운 걸음 기다리겠습니다<br>딸 최희진 · 최인영 올림</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
