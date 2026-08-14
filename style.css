@@ -188,12 +188,13 @@ section { padding: 30px 26px; }
 }
 .contact__notice strong { color: var(--accent); font-weight: 700; }
 .contact__buttons { display: flex; gap: 10px; }
-.contact__btn--accent {
+/* 이중 클래스로 우선순위를 높여 .contact__btn(금색 글자)보다 뒤에 있어도 이기게 함 */
+.contact__btn.contact__btn--accent {
   background: var(--accent);
   color: var(--white);
   border-color: var(--accent);
 }
-.contact__btn--accent:active { background: #8f6231; }
+.contact__btn.contact__btn--accent:active { background: #8f6231; }
 .contact__btn {
   flex: 1;
   text-align: center;
